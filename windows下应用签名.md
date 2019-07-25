@@ -1,5 +1,5 @@
 ## windows下应用签名
-----------------------------
+
 ### 实践：给本地一个exe文件签名  
 #### 1. 工具：
 - Makecert.exe
@@ -30,3 +30,9 @@ signtool sign /f kyle.pfx /p mypassword abc.exe
 - **加盖时间戳**  
 signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll abc.exe  
 /t 后面接时间戳签名服务的URL，示例是一个国外提供免费时间戳签名的URL。
+
+- **最终效果**
+
+![签名前后对比](Snipaste_2019-07-25_14-27-38.png)
+
+签名后查看应用的属性时属性栏会多一个数字签名的选项卡，这里可以看到我们之前加的签名及时间戳信息。可以注意到签名之后应用的大小会略微大于签名前。多出来的这部分应该是我们签名信息。
