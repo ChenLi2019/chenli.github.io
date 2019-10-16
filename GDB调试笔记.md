@@ -13,6 +13,10 @@ https://www.cs.cmu.edu/~gilpin/tutorial/
     debuginfo-install glibc-2.12-1.47.el6_2.9.i686 libgcc-4.4.6-3.el6.i686 libstdc++-4.4.6-3.el6.i686
     ```
 ## 常用命令
+### 执行
+- run/r
+- start //从main开始运行。
+
 ### 显示
 list/l
 ### 单步
@@ -20,8 +24,23 @@ list/l
 - finish 返回函数
 - next/n 单步不进入
 ### stack
-- backtrace
+- backtrace/bt //显示堆栈信息
 
 ### 打印
  print [格式] 变量  
  print *argv@10 //打印字符串数组前10个变量
+
+### 断点
+- break/b 函数或行号 if <condition>
+    
+## 格式
+Format
+a Pointer.
+c Read as integer, print as character.
+d Integer, signed decimal.
+f Floating point number.
+o Integer, print as octal.
+s Try to treat as C string.
+t Integer, print as binary (t = „two“).
+u Integer, unsigned decimal.
+x Integer, print as hexadecimal.
